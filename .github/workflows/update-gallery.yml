@@ -2,9 +2,9 @@ name: Update Project Screenshot Gallery
 
 on:
   push:
-    paths:
-      - "Project Snapshot/**"
-      - ".github/workflows/update-gallery.yml"
+  paths:
+  - "Project Snapshots/**"
+  - ".github/workflows/update-gallery.yml"
   workflow_dispatch:
 
 permissions:
@@ -23,7 +23,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
 
-          folder = Path("Project Snapshot")
+          folder = Path("Project Snapshots")
           extensions = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
 
           images = sorted(
