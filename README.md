@@ -49,6 +49,23 @@ The following screenshots showcase the application's interface, customer analyti
 
 <!-- PROJECT-GALLERY:START -->
 
+![Screenshot (73)](<Project Snapshots/Screenshot (73).png>)
+![Screenshot (74)](<Project Snapshots/Screenshot (74).png>)
+![Screenshot (75)](<Project Snapshots/Screenshot (75).png>)
+![Screenshot (76)](<Project Snapshots/Screenshot (76).png>)
+![Screenshot (77)](<Project Snapshots/Screenshot (77).png>)
+![Screenshot (78)](<Project Snapshots/Screenshot (78).png>)
+![Screenshot (79)](<Project Snapshots/Screenshot (79).png>)
+![Screenshot (80)](<Project Snapshots/Screenshot (80).png>)
+![Screenshot (81)](<Project Snapshots/Screenshot (81).png>)
+![Screenshot (82)](<Project Snapshots/Screenshot (82).png>)
+![Screenshot (83)](<Project Snapshots/Screenshot (83).png>)
+![Screenshot (84)](<Project Snapshots/Screenshot (84).png>)
+![Screenshot (85)](<Project Snapshots/Screenshot (85).png>)
+![Screenshot (86)](<Project Snapshots/Screenshot (86).png>)
+![Screenshot (87)](<Project Snapshots/Screenshot (87).png>)
+![Screenshot (88)](<Project Snapshots/Screenshot (88).png>)
+
 <!-- PROJECT-GALLERY:END -->
 
 ---
