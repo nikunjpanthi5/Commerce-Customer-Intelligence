@@ -2,9 +2,10 @@ name: Update Project Screenshot Gallery
 
 on:
   push:
-  paths:
-  - "Project Snapshots/**"
-  - ".github/workflows/update-gallery.yml"
+    paths:
+      - "Project Snapshots/**"
+      - ".github/workflows/update-gallery.yml"
+      - "README.md"
   workflow_dispatch:
 
 permissions:
@@ -18,21 +19,27 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate image gallery
+      - name: Generate screenshot gallery
         run: |
           python - <<'PY'
           from pathlib import Path
 
           folder = Path("Project Snapshots")
-          extensions = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
+          extensions = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
 
-          images = sorted(
-              p for p in folder.iterdir()
-              if p.is_file() and p.suffix.lower() in extensions
-          ) if folder.exists() else []
+          images = []
+
+          if folder.exists():
+              images = sorted(
+                  [
+                      p for p in folder.iterdir()
+                      if p.is_file() and p.suffix.lower() in extensions
+                  ],
+                  key=lambda p: p.name.lower()
+              )
 
           gallery = "\n".join(
-              f'<img src="{p.as_posix()}" width="300" alt="{p.stem}">'
+              f"![{p.stem}](<{p.as_posix()}>)"
               for p in images
           )
 
@@ -43,26 +50,31 @@ jobs:
           end = "<!-- PROJECT-GALLERY:END -->"
 
           if start not in content or end not in content:
-              raise SystemExit("Gallery markers missing from README")
+              raise SystemExit("Gallery markers missing from README.md")
 
           before, rest = content.split(start, 1)
           _, after = rest.split(end, 1)
 
           updated = (
-              before + start + "\n\n"
+              before
+              + start + "\n\n"
               + gallery + "\n\n"
-              + end + after
+              + end
+              + after
           )
 
           readme.write_text(updated, encoding="utf-8")
+          print(f"Found {len(images)} images.")
           PY
 
-      - name: Commit gallery
+      - name: Commit updated gallery
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add README.md
-          git diff --cached --quiet || (
-            git commit -m "docs: update screenshot gallery" &&
+
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: automatically update screenshot gallery"
             git push
-          )
+          fi
