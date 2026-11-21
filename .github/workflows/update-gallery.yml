@@ -1,0 +1,68 @@
+name: Update Project Screenshot Gallery
+
+on:
+  push:
+    paths:
+      - "Project Snapshot/**"
+      - ".github/workflows/update-gallery.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-gallery:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Generate image gallery
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          folder = Path("Project Snapshot")
+          extensions = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
+
+          images = sorted(
+              p for p in folder.iterdir()
+              if p.is_file() and p.suffix.lower() in extensions
+          ) if folder.exists() else []
+
+          gallery = "\n".join(
+              f'<img src="{p.as_posix()}" width="300" alt="{p.stem}">'
+              for p in images
+          )
+
+          readme = Path("README.md")
+          content = readme.read_text(encoding="utf-8")
+
+          start = "<!-- PROJECT-GALLERY:START -->"
+          end = "<!-- PROJECT-GALLERY:END -->"
+
+          if start not in content or end not in content:
+              raise SystemExit("Gallery markers missing from README")
+
+          before, rest = content.split(start, 1)
+          _, after = rest.split(end, 1)
+
+          updated = (
+              before + start + "\n\n"
+              + gallery + "\n\n"
+              + end + after
+          )
+
+          readme.write_text(updated, encoding="utf-8")
+          PY
+
+      - name: Commit gallery
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || (
+            git commit -m "docs: update screenshot gallery" &&
+            git push
+          )
