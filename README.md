@@ -1,263 +1,140 @@
 # 🛍️ Commerce Customer Intelligence
 
-### An End-to-End E-Commerce Analytics, Machine Learning & Recommendation Platform
-
-An end-to-end Data Science and Machine Learning platform that transforms historical e-commerce transactions into actionable customer intelligence through customer segmentation, churn prediction, explainable AI, and personalized product recommendations.
+**An end-to-end Data Science and Machine Learning platform for e-commerce customer analytics, churn prediction, explainable AI, and personalized product recommendations.**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/Python-3.x-blue?logo=python" alt="Python">
   <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--learn-orange" alt="Machine Learning">
-  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?logo=fastapi" alt="FastAPI">
-  <img src="https://img.shields.io/badge/Frontend-Streamlit-FF4B4B?logo=streamlit" alt="Streamlit">
-  <img src="https://img.shields.io/badge/Analytics-Power%20BI-F2C811?logo=powerbi" alt="Power BI">
-</p>
-
-<p align="center">
-  <a href="https://github.com/nikunjpanthi5/Commerce-Customer-Intelligence">Repository</a> ·
-  <a href="https://nikunjapanthi.com.np/">Developer Portfolio</a> ·
-  <a href="https://archive.ics.uci.edu/dataset/352/online+retail">Dataset Source</a>
+  <img src="https://img.shields.io/badge/Explainable%20AI-SHAP-purple" alt="Explainable AI">
+  <img src="https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/Dashboard-Streamlit-FF4B4B?logo=streamlit" alt="Streamlit">
+  <img src="https://img.shields.io/badge/Business%20Intelligence-Power%20BI-yellow" alt="Power BI">
 </p>
 
 ---
 
-## 📌 Table of Contents
+## 📌 Overview
 
-- [Overview](#-overview)
-- [Project Objectives](#-project-objectives)
-- [Key Features](#-key-features)
-- [System Architecture](#-system-architecture)
-- [Machine Learning Methodology](#-machine-learning-methodology)
-- [Model Evaluation](#-model-evaluation)
-- [Recommendation Systems](#-recommendation-systems)
-- [Technology Stack](#-technology-stack)
-- [Dataset](#-dataset)
-- [Repository Structure](#-repository-structure)
-- [Getting Started](#-getting-started)
-- [API Documentation](#-api-documentation)
-- [Future Improvements](#-future-improvements)
-- [Author](#-author)
+Commerce Customer Intelligence transforms historical e-commerce transaction data into actionable customer insights using data analytics, machine learning, recommendation algorithms, and business intelligence.
 
----
+The project explores how historical purchasing behaviour can be used to:
 
-## 🎯 Overview
+- Understand customer purchasing patterns.
+- Segment customers using RFM analysis.
+- Identify customers with a higher likelihood of churn.
+- Explain machine learning predictions using SHAP.
+- Recommend similar products and complementary items.
+- Generate personalized product recommendations.
+- Present customer intelligence through interactive dashboards and REST APIs.
 
-E-commerce businesses generate large volumes of transactional data, but extracting meaningful customer-level insights requires more than traditional sales reporting.
-
-**Commerce Customer Intelligence** explores how data science and machine learning can transform transaction histories into customer-level intelligence.
-
-The platform integrates:
-
-- Exploratory Data Analysis and customer analytics.
-- RFM-based customer segmentation.
-- Customer churn prediction.
-- Feature engineering and model evaluation.
-- SHAP-based model interpretation.
-- Multiple product recommendation approaches.
-- FastAPI-based machine learning services.
-- Streamlit-based interactive dashboards.
-- Power BI business intelligence.
-
-The objective is to demonstrate how different analytical and machine learning techniques can work together in an integrated customer intelligence platform.
+The platform brings together the complete workflow, from transaction-level data processing to predictive modelling and application-level integration.
 
 ## 🎯 Project Objectives
 
-1. Understand customer purchasing behaviour through exploratory analysis.
-2. Develop customer-level features using RFM analysis and feature engineering.
-3. Identify customers with an increased likelihood of churn.
-4. Evaluate machine learning models using appropriate classification metrics.
-5. Interpret model predictions and investigate important customer-level risk factors.
-6. Explore multiple product recommendation approaches.
-7. Expose trained models through REST APIs.
-8. Present customer intelligence through interactive dashboards and business analytics.
+1. Perform data cleaning, preprocessing, and exploratory data analysis.
+2. Develop customer-level behavioural features using RFM analysis and feature engineering.
+3. Build and evaluate machine learning models for churn prediction.
+4. Investigate model performance using classification metrics and ROC-AUC.
+5. Interpret model predictions using explainable AI techniques.
+6. Implement multiple product recommendation approaches.
+7. Integrate trained models into a FastAPI backend.
+8. Develop an interactive Streamlit customer intelligence application.
+9. Present business insights through Power BI.
+
+---
+
+## 📸 Project Screenshots
+
+The following gallery is automatically generated from images uploaded to the `Project Snapshot/` directory.
+
+<!-- PROJECT-GALLERY:START -->
+
+<!-- PROJECT-GALLERY:END -->
 
 ---
 
 ## ✨ Key Features
 
-### 1. Customer Analytics & Feature Engineering
+### 1. Data Analytics and Feature Engineering
 
-- Transaction data cleaning and preprocessing.
-- Exploratory Data Analysis.
-- Customer-level aggregation.
-- Recency, Frequency and Monetary (RFM) analysis.
-- Customer purchasing behaviour analysis.
-- Customer value and activity segmentation.
-- Extended behavioural feature engineering.
+The data analytics workflow focuses on transforming raw transaction records into meaningful customer-level information.
+
+**Implemented activities:**
+
+- Data cleaning and preprocessing.
+- Exploratory Data Analysis (EDA).
+- Customer-level transaction aggregation.
+- Recency, Frequency, and Monetary (RFM) analysis.
+- Extended customer behavioural feature engineering.
+- Purchasing pattern and revenue analysis.
+- Customer activity and value analysis.
+
+**Examples of engineered features:**
+
+- Recency
+- Frequency
+- Monetary
+- Average Days Between Orders
+- Customer Tenure
+- Unique Products
+- Total Units
+- Units per Order
+- Average Order Value
+- Average Basket Size
+- Spending Variability
+- Maximum Order Value
 
 ### 2. Customer Churn Prediction
 
 A supervised machine learning pipeline designed to estimate customer churn risk from historical purchasing behaviour.
 
-The modelling workflow includes:
+The project explores model development, comparison, evaluation, and interpretation.
 
-- Data preparation and leakage-aware feature selection.
-- Model comparison and experimentation.
+**Implemented workflow:**
+
+- Customer-level feature preparation.
+- Churn target construction.
+- Leakage-aware feature selection.
+- Model experimentation.
 - Gradient Boosting classification.
 - Hyperparameter tuning.
 - Classification threshold analysis.
-- ROC-AUC evaluation.
-- Confusion matrix and classification metrics.
+- Model evaluation.
+- ROC-AUC analysis.
 - SHAP-based model interpretation.
 
 **Customer-level prediction outputs:**
 
 - Predicted churn probability.
 - Churn classification.
-- Customer risk categorization.
-- Retention-oriented analytical insights.
+- Customer risk category.
+- Important contributing features.
+- Potential retention insights.
 
-### 3. Three Product Recommendation Engines
+#### Churn Risk Categories
 
-The platform explores three different recommendation approaches.
+| Risk category | Predicted probability |
+|---|---:|
+| Low | Below 0.20 |
+| Medium | 0.20 to below 0.35 |
+| High | 0.35 or above |
 
-| Recommendation engine | Algorithm | Purpose |
-|---|---|---|
-| Item-to-item recommendation | Cosine Similarity | Find products similar to a selected product |
-| Association-based recommendation | FP-Growth and Association Rules | Discover product associations and cross-selling opportunities |
-| Personalized recommendation | Truncated SVD | Generate personalized product recommendations |
+These categories provide a practical way to organize customers according to their estimated churn risk.
 
-These approaches demonstrate different ways of extracting recommendation signals from historical purchasing behaviour.
+### 3. Model Performance and Evaluation
 
-### 4. Customer 360 Intelligence Dashboard
+Gradient Boosting was evaluated using validation data, with both baseline and tuned results considered.
 
-An interactive Streamlit application bringing customer analytics and machine learning outputs together.
+#### Reported results
 
-**Dashboard modules:**
-
-- Executive Summary
-- Customer 360 & AI Intelligence
-- AI Churn Prediction
-- Personalized Product Recommendations
-- Customer Behavioural Profile
-- Purchase History
-- Power BI Analytics Hub
-- Static Dashboard Gallery
-
-### 5. FastAPI Backend
-
-A REST API designed to serve trained machine learning models and recommendation engines.
-
-| Method | Endpoint | Purpose |
-|---|---|---|
-| GET | `/` | API status |
-| GET | `/health` | Service and model health |
-| POST | `/predict/churn` | Predict customer churn |
-| POST | `/recommend/similar-items` | Find similar products |
-| POST | `/recommend/cart-bundles` | Generate cross-selling suggestions |
-| POST | `/recommend/user-feed` | Generate personalized recommendations |
-
-Interactive API documentation is available through FastAPI Swagger UI.
-
-### 6. Business Intelligence
-
-Power BI integration and interactive visualizations provide additional perspectives on:
-
-- Customer behaviour.
-- Sales performance.
-- Revenue trends.
-- Product performance.
-- Business patterns.
-
----
-
-## 🏗️ System Architecture
-
-The platform combines data processing, machine learning, recommendation engines, an API backend, and interactive analytics.
-
-```mermaid
-flowchart TD
-    A["UCI Online Retail Dataset"] --> B["Data Cleaning & Preprocessing"]
-    B --> C["Exploratory Data Analysis"]
-    C --> D["Customer Analytics & Feature Engineering"]
-    D --> E["RFM Analysis"]
-    D --> F["Churn Prediction"]
-    D --> G["Recommendation Engines"]
-
-    F --> H["Gradient Boosting Model"]
-    H --> I["Model Interpretation & SHAP"]
-
-    G --> J["Cosine Similarity"]
-    G --> K["FP-Growth Association Rules"]
-    G --> L["Truncated SVD"]
-
-    H --> M["FastAPI Backend"]
-    J --> M
-    K --> M
-    L --> M
-
-    M --> N["Streamlit Application"]
-    E --> N
-    I --> N
-
-    N --> O["Customer 360 Intelligence"]
-    N --> P["Power BI Analytics"]
-```
-
----
-
-## 🧠 Machine Learning Methodology
-
-### Customer Feature Engineering
-
-Customer-level features are developed from transaction histories.
-
-Examples include:
-
-- Recency
-- Frequency
-- Monetary value
-- Average days between orders
-- Customer tenure
-- Unique products purchased
-- Total units purchased
-- Average order value
-- Average basket size
-- Spending variability
-- Maximum order value
-
-### Churn Prediction
-
-The churn prediction workflow uses customer-level behavioural features and a dynamically defined churn target.
-
-The modelling process includes:
-
-1. Target construction.
-2. Leakage inspection and feature selection.
-3. Data preparation.
-4. Model experimentation.
-5. Hyperparameter tuning.
-6. Probability threshold analysis.
-7. Performance evaluation.
-8. Model interpretation.
-
-### Model Interpretation
-
-SHAP is used to investigate feature contributions to model predictions.
-
-This supports analysis of:
-
-- Global feature importance.
-- Individual customer predictions.
-- Factors associated with higher predicted churn risk.
-
----
-
-## 📊 Model Evaluation
-
-The current Gradient Boosting experiments produced the following reported results.
-
-### Model performance
-
-| Experiment | Validation ROC-AUC |
+| Evaluation | ROC-AUC |
 |---|---:|
 | Baseline Gradient Boosting | 0.8943 |
 | Tuned Gradient Boosting | 0.8931 |
 
-The tuned experiment did not improve ROC-AUC over the baseline in the reported validation results.
+The baseline model achieved a slightly higher ROC-AUC than the tuned version. Hyperparameter tuning therefore did not improve this particular validation result.
 
-### Classification threshold analysis
-
-At a classification threshold of **0.35**, the reported results were:
+#### Classification performance at threshold 0.35
 
 | Metric | Result |
 |---|---:|
@@ -266,34 +143,131 @@ At a classification threshold of **0.35**, the reported results were:
 | Recall | 63.81% |
 | F1-score | 0.7550 |
 
-The threshold is selected as part of the classification analysis rather than assuming that 0.50 is automatically optimal.
+The threshold of 0.35 represents an operating point selected for classification analysis. Threshold selection involves balancing precision and recall according to the intended business use.
 
-**Important:** These are project-reported validation results, not a guarantee of performance on future or external datasets.
+**Evaluation and explainability materials**
+
+Additional technical visualizations are maintained in the repository's `reports/` directory, including model evaluation and interpretability outputs.
+
+Examples of analysis include:
+
+- ROC curves and ROC-AUC.
+- Confusion matrices.
+- SHAP feature importance and summary plots.
+- Gini-related evaluation.
+- Classification performance comparisons.
+
+See the [`reports/`](reports/) directory for available materials.
+
+### 4. Explainable AI with SHAP
+
+Model interpretation is important because churn predictions should provide more than just a probability.
+
+SHAP is used to investigate how input features contribute to model predictions.
+
+The analysis helps examine:
+
+- Which features influence predictions globally.
+- How individual features affect predicted churn risk.
+- Why a particular customer receives a higher or lower risk score.
+- Which behavioural patterns may be associated with churn.
+
+This supports more interpretable and actionable customer analytics.
+
+### 5. Three Product Recommendation Engines
+
+The project implements three recommendation approaches based on historical purchasing behaviour.
+
+| Recommendation engine | Algorithm | Purpose |
+|---|---|---|
+| Item-to-item recommendation | Cosine Similarity | Find products similar to a selected product |
+| Cart bundle recommendation | FP-Growth and Association Rules | Identify products frequently purchased together |
+| Personalized recommendation | Truncated SVD | Generate personalized product recommendations |
+
+**Implementation details:**
+
+- Item-item similarity using cosine similarity.
+- Association rule mining using FP-Growth.
+- Minimum support: 0.02.
+- Association rules filtered using lift greater than 1.2.
+- Truncated SVD with 20 components.
+
+These approaches demonstrate different ways of extracting recommendation signals from transaction history.
+
+### 6. Customer 360 Intelligence Dashboard
+
+An interactive Streamlit application brings customer analytics, predictive modelling, and recommendation outputs together.
+
+**Dashboard modules include:**
+
+- Executive Summary.
+- Customer 360 & AI Intelligence.
+- AI Churn Prediction.
+- Personalized Product Recommendations.
+- Customer Behavioural Profile.
+- Purchase History.
+- Power BI Analytics Hub.
+- Static Dashboard Gallery.
+
+The application is designed to make analytical outputs accessible through an interactive interface.
+
+### 7. FastAPI Backend
+
+A FastAPI backend exposes the trained machine learning models and recommendation engines through REST API endpoints.
+
+| Method | Endpoint | Purpose |
+|---|---|---|
+| GET | `/` | API status |
+| GET | `/health` | Model and service health |
+| POST | `/predict/churn` | Predict customer churn |
+| POST | `/recommend/similar-items` | Find similar products |
+| POST | `/recommend/cart-bundles` | Generate product bundle suggestions |
+| POST | `/recommend/user-feed` | Generate personalized recommendations |
+
+Interactive API documentation is available through FastAPI Swagger UI at `/docs` when the backend is running.
+
+### 8. Business Intelligence with Power BI
+
+Power BI integration provides additional business-oriented visualizations.
+
+The analytics component supports exploration of:
+
+- Sales performance.
+- Customer purchasing behaviour.
+- Revenue trends.
+- Product performance.
+- Business-level insights.
 
 ---
 
-## 🛍️ Recommendation Systems
+## 🏗️ System Architecture
 
-Three recommendation approaches are implemented and explored.
+The project follows a modular architecture that connects data processing, machine learning, recommendation systems, API services, and dashboard components.
 
-### Item-to-item Cosine Similarity
+```mermaid
+flowchart TD
+    A["UCI Online Retail Dataset"] --> B["Data Cleaning and Preprocessing"]
+    B --> C["Exploratory Data Analysis"]
+    C --> D["Customer Analytics and RFM"]
+    D --> E["Feature Engineering"]
 
-Uses product purchase patterns to calculate similarity between items and identify related products.
+    E --> F["Churn Prediction"]
+    E --> G["Recommendation Systems"]
 
-### FP-Growth and Association Rules
+    F --> H["Model Evaluation and SHAP"]
+    G --> I["Cosine Similarity"]
+    G --> J["FP-Growth"]
+    G --> K["Truncated SVD"]
 
-Identifies frequent itemsets and product associations.
+    H --> L["FastAPI Backend"]
+    I --> L
+    J --> L
+    K --> L
 
-Current experimentation includes:
-
-- Minimum support: 0.02
-- Minimum lift: greater than 1.2
-
-### Personalized Recommendations using Truncated SVD
-
-Uses matrix factorization to explore personalized recommendations from customer-product interaction patterns.
-
-Current configuration uses 20 latent components.
+    L --> M["Streamlit Application"]
+    M --> N["Customer 360 Dashboard"]
+    M --> O["Power BI Analytics"]
+```
 
 ---
 
@@ -303,10 +277,11 @@ Current configuration uses 20 latent components.
 |---|---|
 | Programming | Python |
 | Data Manipulation | Pandas, NumPy |
+| Scientific Computing | SciPy |
 | Visualization | Matplotlib, Seaborn, Plotly |
 | Machine Learning | Scikit-learn |
 | Recommendation Systems | Cosine Similarity, FP-Growth, Association Rules, Truncated SVD |
-| Model Interpretation | SHAP |
+| Explainable AI | SHAP |
 | Model Persistence | Joblib |
 | Backend | FastAPI, Pydantic |
 | Frontend | Streamlit |
@@ -315,9 +290,7 @@ Current configuration uses 20 latent components.
 
 ---
 
-## 📂 Repository Structure
-
-The current repository keeps its Jupyter notebooks in the root directory.
+## 📂 Project Structure
 
 ```text
 Commerce-Customer-Intelligence/
@@ -328,11 +301,15 @@ Commerce-Customer-Intelligence/
 ├── dashboard/
 │
 ├── data/
+│   ├── raw/
+│   └── processed/
 │
 ├── models/
 │
 ├── reports/
 │   └── figures/
+│
+├── Project Snapshot/
 │
 ├── 01_understanding_data.ipynb
 ├── 02_EDA.ipynb
@@ -346,7 +323,7 @@ Commerce-Customer-Intelligence/
 └── README.md
 ```
 
-The `data`, `models`, and `dashboard` directories contain supporting project resources. Their detailed contents depend on the files included in the repository.
+The repository keeps its Jupyter notebooks in the root directory. The existing directory organization is retained.
 
 ---
 
@@ -354,12 +331,11 @@ The `data`, `models`, and `dashboard` directories contain supporting project res
 
 This project uses the **Online Retail dataset** from the UCI Machine Learning Repository.
 
-**Dataset source:**  
-https://archive.ics.uci.edu/dataset/352/online+retail
+**Dataset source:** [UCI Machine Learning Repository – Online Retail](https://archive.ics.uci.edu/dataset/352/online+retail)
 
 The dataset contains historical transactions from a UK-based online retail business covering December 2010 to December 2011.
 
-### Dataset characteristics
+**Dataset information includes:**
 
 - Invoice and transaction identifiers.
 - Product descriptions.
@@ -371,20 +347,13 @@ The dataset contains historical transactions from a UK-based online retail busin
 
 **Currency:** British Pound Sterling (GBP).
 
-The transaction data is processed and transformed into customer-level analytical features for modelling and recommendation tasks.
+The transaction data is transformed into customer-level analytical features for churn modelling and recommendation tasks.
 
-Please obtain the dataset from its original source and follow its applicable usage and redistribution conditions.
+The dataset does not provide a ready-made customer churn label. The project constructs a churn target from customer purchasing inactivity. The modelling workflow therefore requires careful target definition and leakage-aware feature preparation.
 
 ---
 
 ## 🚀 Getting Started
-
-### Prerequisites
-
-- Python 3.10 or later.
-- Git.
-- Jupyter Notebook or JupyterLab.
-- Access to the required processed datasets and trained model artifacts.
 
 ### 1. Clone the repository
 
@@ -394,25 +363,32 @@ git clone https://github.com/nikunjpanthi5/Commerce-Customer-Intelligence.git
 cd Commerce-Customer-Intelligence
 ```
 
-### 2. Create a virtual environment
+### 2. Download Git LFS files
 
-**Windows**
-
-```bash
-python -m venv .venv
-
-.venv\Scripts\activate
-```
-
-**Linux / macOS**
+If you use the repository's Git LFS-managed model or data artifacts:
 
 ```bash
-python3 -m venv .venv
-
-source .venv/bin/activate
+git lfs install
+git lfs pull
 ```
 
-### 3. Install dependencies
+### 3. Create a virtual environment
+
+**Windows:**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**Linux / macOS:**
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### 4. Install dependencies
 
 ```bash
 python -m pip install --upgrade pip
@@ -423,27 +399,37 @@ pip install streamlit fastapi uvicorn pydantic
 pip install joblib requests mlxtend shap
 ```
 
-### 4. Prepare project resources
+These commands install the main packages used by the documented workflows. Additional packages may be required depending on the imports and components in the current application.
 
-Ensure the required processed datasets and trained model artifacts are available in the expected project locations.
+### 5. Prepare data and model artifacts
 
-The application requires its corresponding data and model files. Cloning the repository does not automatically download external datasets or train the models.
+Ensure the required processed datasets and trained model artifacts are available.
 
-### 5. Start the FastAPI backend
+The application depends on the corresponding data and model files. Check the paths configured in the application and API code and adjust them for your local environment where necessary.
 
-From the project root:
+**Note:** Running the application does not automatically train the models.
+
+### 6. Start the FastAPI backend
+
+From the repository root:
 
 ```bash
 uvicorn api.main:app --reload --port 8000
 ```
 
-API documentation:
+API base URL:
+
+```text
+http://127.0.0.1:8000
+```
+
+Swagger documentation:
 
 ```text
 http://127.0.0.1:8000/docs
 ```
 
-### 6. Start the Streamlit application
+### 7. Start the Streamlit application
 
 Open another terminal, activate the same virtual environment, and run:
 
@@ -457,7 +443,27 @@ The application should be available at:
 http://localhost:8501
 ```
 
-**Note:** The application may require configuration of local data paths, model artifact paths, and the backend URL. Ensure these match your local environment and the application's configuration.
+---
+
+## 🧠 Machine Learning and Data Science Concepts
+
+This project explores several practical concepts:
+
+- Exploratory Data Analysis.
+- Customer segmentation.
+- RFM analysis.
+- Behavioural feature engineering.
+- Supervised classification.
+- Ensemble learning.
+- Hyperparameter optimization.
+- Classification threshold selection.
+- Model evaluation and validation.
+- Explainable AI.
+- Item-based recommendation.
+- Association rule mining.
+- Matrix factorization.
+- REST API integration.
+- Business-oriented customer analytics.
 
 ---
 
@@ -465,14 +471,15 @@ http://localhost:8501
 
 Potential areas for further development include:
 
-- Temporal validation of churn predictions.
 - More extensive model comparison and hyperparameter optimization.
+- Temporal validation of churn predictions.
+- Further investigation of model calibration.
 - Recommendation evaluation using Precision@K, Recall@K, MAP@K, and NDCG@K.
 - Cold-start recommendation strategies.
 - Content-based recommendation integration.
 - Automated model retraining pipelines.
 - Model monitoring and performance tracking.
-- API authentication and security.
+- Authentication and API security.
 - Cloud deployment and scalability improvements.
 - A/B testing of customer retention strategies.
 
@@ -480,18 +487,16 @@ Potential areas for further development include:
 
 ## 👨‍💻 Author
 
-**Nikunja Panthi (Nikunj Panthi)**
+**Nikunja (Nikunj) Panthi**
 
-BIT Student | Data Science | Machine Learning | AI Research Enthusiast
+BIT Student | Data Science | Machine Learning | AI Research
 
-- **GitHub:** https://github.com/nikunjapanthi5
-- **LinkedIn:** https://www.linkedin.com/in/nikunja-panthi-47107a294/
-- **Portfolio:** https://nikunjapanthi.com.np/
-
-📍 Pokhara, Nepal
+- **GitHub:** [@nikunjpanthi5](https://github.com/nikunjpanthi5)
+- **LinkedIn:** [Nikunja Panthi](https://www.linkedin.com/in/nikunja-panthi-47107a294/)
+- **Portfolio:** [nikunjapanthi.com.np](https://nikunjapanthi.com.np/)
 
 ---
 
 <p align="center">
-  <i>Turning E-Commerce Transactions into Customer Intelligence.</i>
+  <b>Turning E-Commerce Transactions into Customer Intelligence.</b>
 </p>
