@@ -45,7 +45,7 @@ The platform brings together the complete workflow, from transaction-level data 
 
 ## 📸 Project Screenshots
 
-The following gallery is automatically generated from images uploaded to the `Project Snapshot/` directory.
+The following screenshots showcase the application's interface, customer analytics, machine learning predictions, and recommendation capabilities.
 
 <!-- PROJECT-GALLERY:START -->
 
